@@ -10,9 +10,20 @@ recursive call considers.
 
 ## Runtime Analysis
 
-Analyse the time complexity of your implementation and give a $\Theta$ bound for
-its worst-case runtime. Add your answer, including your reasoning, to this
-markdown file.
+The swap function simply exchanges a couple elements, and it's run time is
+constant. $\Theta(1)$.  
+
+The partition function has a few assignments and other behaviors that run in
+constant time. Additionally it runs through the elements of subarrays of size
+n, doing some constant amount of time of work per element. $\Theta(n)$  
+
+Then, like with typical quicksort where a poor pivot is constantly selected,
+such as a pivot that results in two subarrays, 1 with 0 elements, and the
+other with n-1 elements, the main quicksort function will product a time
+complexity of $\Theta(n^2)$.  
+
+Multiplying those out produces a final worst case scenario time complexity of
+$\Theta(n^3)$.  
 
 ## Resources
 
