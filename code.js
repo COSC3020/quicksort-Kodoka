@@ -71,13 +71,3 @@ function swap(array, low, high)
     array[low] = array[high];
     array[high] = temp;
 }
-
-// testArray = [8, 6, 7, 5, 3, 0, 9];
-// testArray2 = [0, 0];
-// testArray3 = [1, 0];
-// testArray4 = [];
-
-// console.log("Array 1", quicksort(testArray));
-// console.log("Array 2", quicksort(testArray2));
-// console.log("Array 3", quicksort(testArray3));
-// console.log("Array 4", quicksort(testArray4));
