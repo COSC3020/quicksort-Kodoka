@@ -13,8 +13,8 @@ recursive call considers.
 Like standard quick sort, in a worst case scenario, such as consistently choosing
 the last element of the array, which is exactly what my code does, my code ends up
 performing $n+(n-1)+(n-2)+...+1 = \frac{n(n+1)}{2}$ work, where n is the size
-of the initial array to be sorted, as each sequential call work on a a portion of
-the array 1 element smaller than the previous call, 'til we've worked our way down
+of the initial array to be sorted, as each sequential call works on a portion of
+the array 1 element smaller than the previous iteration, 'til we've worked our way down
 to a single element. As we don't account for constants or lower order terms
 $\frac{n(n+1)}{2}$ gives my code a final worst case scenario run time of $\Theta(n^2)$.
 
