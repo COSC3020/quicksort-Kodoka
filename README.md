@@ -10,20 +10,13 @@ recursive call considers.
 
 ## Runtime Analysis
 
-The swap function simply exchanges a couple elements, and it's run time is
-constant. $\Theta(1)$.  
-
-The partition function has a few assignments and other behaviors that run in
-constant time. Additionally it runs through the elements of subarrays of size
-n, doing some constant amount of time of work per element. $\Theta(n)$  
-
-Then, like with typical quicksort where a poor pivot is constantly selected,
-such as a pivot that results in two subarrays, 1 with 0 elements, and the
-other with n-1 elements, the main quicksort function will product a time
-complexity of $\Theta(n^2)$.  
-
-Multiplying those out produces a final worst case scenario time complexity of
-$\Theta(n^3)$.  
+Like standard quick sort, in a worst case scenario, such as consistently choosing
+the last element of the array, which is exactly what my code does, my code ends up
+performing $n+(n-1)+(n-2)+...+1 = \frac{n(n+1)}{2}$ work, where n is the size
+of the initial array to be sorted, as each sequential call work on a a portion of
+the array 1 element smaller than the previous call, 'til we've worked our way down
+to a single element. As we don't account for constants or lower order terms
+$\frac{n(n+1)}{2}$ gives my code a final worst case scenario run time of $\Theta(n^2)$.
 
 ## Resources
 
@@ -34,6 +27,13 @@ https://www.geeksforgeeks.org/c-program-for-iterative-quick-sort/
 I also read through the following page for a more step by step refresher on how
 recursive quick sort works in general:
 https://www.geeksforgeeks.org/quick-sort-algorithm/  
+
+I compared my iterative quick sort to standard quick sort, after you suggested
+doing so for analyzing merge sort's time complexity using the following source:
+https://builtin.com/articles/quicksort#:~:text=Quicksort%20Worst%2DCase%20Time%20Complexity,Quicksort%20is%20O%20(n2)%20.  
+
+Sum of $n+(n-1)+(n-2)+...+1$:
+https://en.wikipedia.org/wiki/Triangular_number  
 
 ## Plagiarism Notice
 
